@@ -1,0 +1,36 @@
+{
+  "name": "mail-goggles-backend",
+  "description": "Backend for an email tracker built with NodeJS and Typescript.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "author": {
+    "name": "Mohamed Shadab",
+    "url": "https://shadxx7.github.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shadxx7/mail-goggles-backend"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsnd --respawn src/index.ts"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "pg": "^7.11.0",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.18",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.0",
+    "@types/morgan": "^1.7.35",
+    "@types/node": "^12.0.10",
+    "ts-node": "^8.3.0",
+    "ts-node-dev": "^1.0.0-pre.40",
+    "typescript": "^3.5.2"
+  }
+}
