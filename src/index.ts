@@ -2,6 +2,7 @@ import 'reflect-metadata'
 import express from 'express'
 import morgan from 'morgan'
 import path from 'path'
+import db from './config/database'
 
 const app = express()
 
@@ -18,7 +19,17 @@ let options = {
   },
 }
 
+// Test Database Connection
+db()
+  .then(() => {
+    console.log('Database connection successful!')
+  })
+  .catch(err => {
+    console.log('Something went wrong. Error: ', err)
+  })
+
 app.get('/', (req, res) => {
+  console.log(req)
   res.status(200).sendFile('main.png', options)
 })
 
